@@ -22,6 +22,7 @@ Básicamente, su mayor dolor de cabeza hoy es la seguridad de la información, p
 
 
 ### 5. ¿Qué evidencia le pediríamos al equipo de TI?
+**Para ISO/IEC 27001:**
 
 1.  **Política de Seguridad de la Información firmada:** El documento oficial donde la alta dirección establece las reglas del juego, los compromisos y las responsabilidades de todos frente al cuidado de los datos.
 2.  **Plan de tratamiento de riesgos:** El documento donde la empresa lista qué riesgos identificó (como el robo de información) y qué controles decidió implementar para mitigarlos, justificando por qué eligió esos y no otros.
