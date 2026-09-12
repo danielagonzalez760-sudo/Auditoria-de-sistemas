@@ -23,9 +23,14 @@ Básicamente, su mayor dolor de cabeza hoy es la seguridad de la información, p
 
 ### 5. ¿Qué evidencia le pediríamos al equipo de TI?
 
-**Para ISO/IEC 27001:**
-1.  **Informe post-ciberataque:** El documento que detalle qué brechas se encontraron, qué acciones correctivas se implementaron y cómo se actualizó el protocolo de respuesta.
-2.  **Resultados de la última auditoría interna de seguridad:** La evidencia de que la empresa se autoevalúa y revisa constantemente su Sistema de Gestión de Seguridad de la Información (SGSI).
+1.  **Política de Seguridad de la Información firmada:** El documento oficial donde la alta dirección establece las reglas del juego, los compromisos y las responsabilidades de todos frente al cuidado de los datos.
+2.  **Plan de tratamiento de riesgos:** El documento donde la empresa lista qué riesgos identificó (como el robo de información) y qué controles decidió implementar para mitigarlos, justificando por qué eligió esos y no otros.
+3.  **Registros de capacitación a empleados:** La evidencia de que no solo TI está blindado, sino que a los empleados se les enseña periódicamente cómo evitar phishing, manejar contraseñas y reportar incidentes.
 
+---
+**Bibliografia**
+Ecopetrol S.A. (2026). Informe de Gestión y Sostenibilidad 2026. Bogotá: Ecopetrol. Recuperado de: [[enlace al informe](http://files.ecopetrol.com.co/web/esp/aga2026/informe-integrado-gestion-informe-anual-gc.pdf#98#11)]
 
+Caracol Radio. (2026). Así fue el ciberataque que sufrió Ecopetrol y que dejó al descubierto datos de 15 firmas. Recuperado de: [enlace a la noticia]
 
+El Nuevo Siglo. (2026). Ecopetrol confirma robo de información tras ciberataque. Recuperado de: [enlace a la noticia]
