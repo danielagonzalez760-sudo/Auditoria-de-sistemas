@@ -21,5 +21,11 @@ Básicamente, su mayor dolor de cabeza hoy es la seguridad de la información, p
 3.  **ITIL** (tercero)
 
 
+### 5. ¿Qué evidencia le pediríamos al equipo de TI?
+
+**Para ISO/IEC 27001:**
+1.  **Informe post-ciberataque:** El documento que detalle qué brechas se encontraron, qué acciones correctivas se implementaron y cómo se actualizó el protocolo de respuesta.
+2.  **Resultados de la última auditoría interna de seguridad:** La evidencia de que la empresa se autoevalúa y revisa constantemente su Sistema de Gestión de Seguridad de la Información (SGSI).
+
 
 
