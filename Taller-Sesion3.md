@@ -2,5 +2,5 @@
 **Docente:** Juan Duque
 
 **Integrantes del equipo**
-*   [Daniela Gonzalez Tarraz]
+*   Daniela Gonzalez Tarraz
 *   [Juan David Lopez]
