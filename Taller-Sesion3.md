@@ -31,6 +31,6 @@ Básicamente, su mayor dolor de cabeza hoy es la seguridad de la información, p
 **Bibliografia**
 Ecopetrol S.A. (2026). Informe de Gestión y Sostenibilidad 2026. Bogotá: Ecopetrol. Recuperado de: [[enlace al informe](http://files.ecopetrol.com.co/web/esp/aga2026/informe-integrado-gestion-informe-anual-gc.pdf#98#11)]
 
-Caracol Radio. (2026). Así fue el ciberataque que sufrió Ecopetrol y que dejó al descubierto datos de 15 firmas. Recuperado de: [https://caracol.com.co/2026/07/29/la-informacion-ya-se-encuentra-en-la-dark-web-experto-sobre-ciberataque-a-ecopetrol/?primarySection=/actualidad/justicia#1]
+Caracol Radio. (2026). Así fue el ciberataque que sufrió Ecopetrol y que dejó al descubierto datos de 15 firmas. Recuperado de: [[enlace al informe](https://caracol.com.co/2026/07/29/la-informacion-ya-se-encuentra-en-la-dark-web-experto-sobre-ciberataque-a-ecopetrol/?primarySection=/actualidad/justicia#1)]
 
-El Nuevo Siglo. (2026). Ecopetrol confirma robo de información tras ciberataque. Recuperado de: [enlace a la noticia https://www.elnuevosiglo.com.co/nacion/ecopetrol-denuncia-robo-de-informacion-en-15-firmas-tras-ciberataque]
+El Nuevo Siglo. (2026). Ecopetrol confirma robo de información tras ciberataque. Recuperado de: [[enlace a la noticia](https://www.elnuevosiglo.com.co/nacion/ecopetrol-denuncia-robo-de-informacion-en-15-firmas-tras-ciberataque)]
