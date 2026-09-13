@@ -20,6 +20,15 @@ Básicamente, su mayor dolor de cabeza hoy es la seguridad de la información, p
 2.  **COBIT** (segundo)
 3.  **ITIL** (tercero)
 
+### 4. ¿Por qué escogimos estos marcos y en este orden?
+
+1.  **ISO/IEC 27001:** Elegimos este como primer marco porque uno de los principales problemas que identificamos en Ecopetrol es la seguridad de la información. La empresa maneja mucha información importante y, además, recientemente tuvo un incidente de ciberseguridad. Este marco nos permite revisar cómo la empresa identifica los riesgos relacionados con la información y qué controles tiene para protegerla, teniendo en cuenta la confidencialidad, integridad y disponibilidad de la información. Lo ponemos primero porque consideramos que antes de revisar otros aspectos de TI, es necesario saber si la información de la empresa está bien protegida.
+
+2.  **COBIT:** Después aplicaríamos COBIT porque queremos revisar cómo se está administrando y gobernando el área de TI. Este marco nos ayudaría a revisar si existen responsabilidades claras, si los riesgos tecnológicos se están controlando, si las decisiones de TI están relacionadas con los objetivos de la empresa y si se está haciendo un buen uso de los recursos tecnológicos. Lo ponemos en segundo lugar porque, después de revisar la seguridad de la información, necesitamos saber si la empresa está gestionando correctamente toda su área de tecnología.
+
+3.  **ITIL:** Por último aplicaríamos ITIL, porque está más enfocado en la gestión de los servicios de TI. En una empresa como Ecopetrol, los sistemas tecnológicos tienen que funcionar correctamente y estar disponibles para los trabajadores y para las operaciones de la empresa. ITIL nos permitiría revisar cómo se manejan los incidentes, los cambios en los sistemas, las solicitudes de los usuarios y la continuidad de los servicios. Lo dejamos de tercero porque primero queremos revisar la seguridad con ISO/IEC 27001 y después la administración y gobierno de TI con COBIT. Finalmente, ITIL nos ayudaría a revisar cómo se están prestando y administrando los servicios de TI en el día a día.
+
+En resumen, escogimos este orden porque **ISO/IEC 27001 nos ayuda a proteger la información, COBIT nos ayuda a administrar y gobernar TI, e ITIL nos ayuda a gestionar los servicios de TI**. De esta manera, los tres marcos se complementan y permiten revisar diferentes aspectos de la tecnología de Ecopetrol.
 
 ### 5. ¿Qué evidencia le pediríamos al equipo de TI?
 **Para ISO/IEC 27001:**
@@ -27,6 +36,19 @@ Básicamente, su mayor dolor de cabeza hoy es la seguridad de la información, p
 1.  **Política de Seguridad de la Información firmada:** El documento oficial donde la alta dirección establece las reglas del juego, los compromisos y las responsabilidades de todos frente al cuidado de los datos.
 2.  **Plan de tratamiento de riesgos:** El documento donde la empresa lista qué riesgos identificó (como el robo de información) y qué controles decidió implementar para mitigarlos, justificando por qué eligió esos y no otros.
 3.  **Registros de capacitación a empleados:** La evidencia de que no solo TI está blindado, sino que a los empleados se les enseña periódicamente cómo evitar phishing, manejar contraseñas y reportar incidentes.
+
+**Para COBIT:**
+
+1.  **Matriz de roles y responsabilidades de TI:** documento donde se pueda comprobar quién es responsable de las diferentes actividades y decisiones relacionadas con los sistemas y la tecnología.
+2.  **Informes de desempeño de TI:** reportes donde se pueda revisar si el área de TI está cumpliendo sus objetivos y cómo está funcionando.
+3.  **Matriz de riesgos tecnológicos:** documento donde se registren los riesgos relacionados con los sistemas tecnológicos y las acciones que se están realizando para controlarlos.
+
+**Para ITIL:**
+
+1.  **Registro de cambios en los sistemas:** documentos que muestren los cambios realizados en los sistemas, quién los autorizó y si fueron probados antes de aplicarlos.
+2.  **Registro de incidentes y solicitudes:** evidencia de cómo se registran y atienden problemas o solicitudes de los usuarios, por ejemplo, cuando un sistema deja de funcionar.
+3.  **Acuerdos de nivel de servicio (SLA):** documentos donde se establezcan los tiempos y niveles de servicio que TI debe cumplir, como el tiempo máximo para responder o solucionar un problema.
+
 
 ---
 **Bibliografia**
