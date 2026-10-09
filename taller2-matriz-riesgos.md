@@ -52,3 +52,16 @@ Seguimos con **Ecopetrol**. Para esta entrega nos enfocamos en el incidente de c
 *   **Control propuesto:** MFA obligatorio para el 100% de las cuentas, especialmente para operaciones de descarga y acceso a almacenamiento en la nube; monitoreo de inicios de sesión anómalos.
 *   **Justificación:** El número de cuentas afectadas (3.300) demuestra que el control de acceso basado solo en credenciales es insuficiente.emuestra que el control de acceso basado solo en credenciales es insuficiente.
 *   **Marco relacionado:** ISO/IEC 27001 (control de acceso).
+
+*   ### R-03 — Credenciales con privilegios elevados
+*   **Activo o proceso:** Credenciales de administrador o con privilegios sobre servicios en la nube.
+*   **Amenaza:** Uso indebido de una credencial con altos privilegios (hipótesis investigada por las autoridades).
+*   **Vulnerabilidad:** El análisis forense no ha establecido si hubo descuido o entrega deliberada de una credencial de alto privilegio, lo que sugiere que el control sobre estas credenciales es limitado [citation:7].
+*   **Riesgo:** Un atacante con credenciales de alto privilegio podría comprometer el dominio completo y desplegar ransomware en minutos, como hace “The Gentlemen” [(El Espectador, 2026)].
+*   **Probabilidad:** 3. No confirmado, pero es la hipótesis principal de la investigación forense.
+*   **Impacto:** 5. Una credencial de dominio comprometida puede cifrar toda la infraestructura.
+*   **Nivel:** 15.
+*   **Control actual o evidencia:** Sin evidencia pública de gestión de credenciales privilegiadas (PAM) ni rotación de estas.
+*   **Control propuesto:** Implementar gestión de accesos privilegiados (PAM), rotación automática de credenciales de administrador y autenticación sin contraseña para cuentas de alto privilegio.
+*   **Justificación:** El actor “The Gentlemen” tiene capacidad demostrada de comprometer dominios completos con credenciales de administrador.
+*   **Marco relacionado:** ISO/IEC 27001 y COBIT (gestión de identidades y accesos privilegiados).
