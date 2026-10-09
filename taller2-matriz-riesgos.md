@@ -65,3 +65,50 @@ Seguimos con **Ecopetrol**. Para esta entrega nos enfocamos en el incidente de c
 *   **Control propuesto:** Implementar gestión de accesos privilegiados (PAM), rotación automática de credenciales de administrador y autenticación sin contraseña para cuentas de alto privilegio.
 *   **Justificación:** El actor “The Gentlemen” tiene capacidad demostrada de comprometer dominios completos con credenciales de administrador.
 *   **Marco relacionado:** ISO/IEC 27001 y COBIT (gestión de identidades y accesos privilegiados).
+
+### R-04 — Respaldos e integridad de la información
+*   **Activo o proceso:** Copias de seguridad, respaldos de información corporativa y mecanismos de recuperación de datos.
+*   **Amenaza:** Ataque de ransomware que pueda cifrar, modificar o eliminar información, así como comprometer las copias de seguridad.
+*   **Vulnerabilidad:** Posible falta de protección y aislamiento de las copias de seguridad.
+*   **Riesgo:** Un atacante podría comprometer los respaldos y alterar o eliminar información importante, dificultando la recuperación de los sistemas después de un ataque y aumentando el tiempo de indisponibilidad de los servicios.
+*   **Probabilidad:** 3. Ya ocurrió un acceso no autorizado a la nube, aunque no se confirmó que los respaldos fueran afectados.
+*   **Impacto:** 5. La pérdida o alteración de las copias de seguridad podría dificultar la recuperación de información crítica y generar consecuencias operativas y económicas.
+*   **Nivel:** 15.
+*   **Control actual o evidencia:** Ecopetrol tomó medidas para controlar el incidente, pero no se conoce públicamente cómo están protegidos todos sus respaldos.
+*   **Control propuesto:** Crear copias de seguridad protegidas, mantenerlas separadas de los sistemas principales y probar periódicamente su recuperación.
+*   **Justificación:** Los respaldos constituyen una medida esencial para recuperar la información después de un ataque. Si también son comprometidos, la organización puede perder una de sus principales herramientas de recuperación.
+*   **Marco relacionado:** ISO 27001, porque ayuda a proteger la información y mantener su disponibilidad.
+
+### R-05 — Información financiera y operativa descargada
+*   **Activo o proceso:** Información financiera, administrativa y operativa de Ecopetrol.
+*   **Amenaza:** Robo y publicación de información confidencial.
+*   **Vulnerabilidad:** Posibles debilidades en la clasificación de la información, los permisos de acceso, el monitoreo de descargas y los mecanismos de prevención de fuga de datos.
+*   **Riesgo:** La publicación de información financiera u operativa podría exponer datos confidenciales, facilitar nuevos ataques, afectar la confianza de las partes interesadas y generar consecuencias legales o reputacionales para Ecopetrol y sus compañías relacionadas.
+*   **Probabilidad:** 4. La información fue extraída y posteriormente se publicaron archivos.
+*   **Impacto:** 3. La filtración podría generar pérdidas económicas indirectas y afectar la confianza en la empresa.
+*   **Nivel:** 12.
+*   **Control actual o evidencia:** se revocaron accesos y se adoptaron medidas de contención. La publicación posterior de archivos en la demuestra que parte de la información extraída quedó expuesta. No se dispone de información pública suficiente para determinar el alcance de todos los controles de prevención de fuga de datos.
+*   **Control propuesto:** Limitar el acceso a los archivos, proteger los datos importantes y utilizar herramientas que detecten posibles filtraciones.
+*   **Justificación:** La confidencialidad de la información es fundamental para proteger los procesos internos y la reputación de la organización. Aunque el incidente no haya generado una interrupción operativa ni un impacto financiero directo, la divulgación de documentos puede producir consecuencias posteriores.
+*   **Marco relacionado:** ISO 27001, porque se enfoca en la seguridad y confidencialidad de la información.
+
+### R-06 — Infraestructura OT (SCADA)
+*   **Activo o proceso:** Sistemas SCADA utilizados para supervisar y controlar procesos industriales de Ecopetrol.
+*   **Amenaza:** Acceso no autorizado de actores externos, propagación de ransomware desde redes corporativas hacia redes industriales o manipulación de sistemas de control.
+*   **Vulnerabilidad:** Posibles fallas en la separación entre las redes corporativas y las redes industriales.
+*   **Riesgo:** Un atacante podría afectar los procesos industriales y ocasionar interrupciones en las operaciones.
+*   **Probabilidad:** 3. Hubo un incidente de ciberseguridad, pero no se confirmó que los sistemas SCADA fueran afectados.
+*   **Impacto:** 4. Una afectación a la infraestructura industrial podría ocasionar interrupciones operativas, daños en equipos y riesgos para las personas y el medioambiente.
+*   **Nivel:** 12.
+*   **Control actual o evidencia:** De acuerdo con caso, no hubo interrupción operativa. Sin embargo, esto no permite confirmar por sí solo el estado de la segmentación de redes OT, los controles de acceso remoto o los mecanismos de detección industrial.
+*   **Control propuesto:** Separar las redes corporativas de las redes OT mediante segmentación y zonas de seguridad, controlar estrictamente los accesos remotos, utilizar listas de autorización, monitorear el tráfico industrial y establecer procedimientos de recuperación específicos para los sistemas SCADA.
+*   **Justificación:** Los sistemas industriales requieren medidas de protección especializadas porque una afectación puede tener consecuencias que van más allá de la pérdida de información, comprometiendo la continuidad de los procesos y la seguridad de las instalaciones.
+*   **Marco relacionado:** ISO/IEC 27001 (gestión de riesgos y controles de seguridad), COBIT (gobierno y gestión de TI) e ITIL (gestión de incidentes, continuidad y disponibilidad de los servicios).
+
+### Conclusión
+
+Con el desarrollo del taller se pudieron identificar los principales riesgos de ciberseguridad relacionados con el incidente de Ecopetrol, como el acceso a la nube, las cuentas de usuario, las credenciales, los respaldos, la filtración de información y los sistemas industriales.
+
+Los riesgos más altos fueron el almacenamiento en la nube y las cuentas corporativas, con un nivel de 16. Esto da a entender la importancia de mejorar los controles de acceso, utilizar autenticaciones y vigilar las descargas de información.
+
+También se pudo entender cómo ISO 27001, COBIT e ITIL ayudan a mejorar la seguridad, controlar los riesgos y responder ante incidentes. En conclusión, el caso demuestra que no basta con detener un ataque, sino que también es necesario proteger la información, evitar nuevas filtraciones y estar preparados para recuperar los sistemas si ocurre otro incidente.
