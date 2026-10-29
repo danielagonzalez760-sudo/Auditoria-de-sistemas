@@ -9,4 +9,4 @@
 *   Daniela Gonzalez Tarraz
 *   Juan David Lopez
 
-**Enlace a la matriz de riesgos vigente:** [Insertar aquí el enlace a su archivo taller2-matriz-riesgos.md en GitHub]
+**Enlace a la matriz de riesgos vigente:** [https://github.com/danielagonzalez760-sudo/Auditoria-de-sistemas/blob/main/taller2-matriz-riesgos.md]
