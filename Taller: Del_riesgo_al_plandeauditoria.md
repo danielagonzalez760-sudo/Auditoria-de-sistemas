@@ -60,5 +60,36 @@ Evaluaremos el control basándonos en el estándar **ISO/IEC 27001** y lo que de
 
 ---
 
+## 5. Programa de trabajo (Procedimientos)
 
+Diseñamos dos procedimientos complementarios para cubrir el diseño y la operación del control.
 
+### Procedimiento 1: Verificación del diseño (¿Cómo debería funcionar?)
+* **Control:** Configuración de MFA y bloqueo de descargas.
+* **Qué haremos:** Entrevistaremos al líder de Ciberseguridad y revisaremos la configuración del directorio activo y del tenant en la nube.
+* **Población:** Configuración global del directorio y de la plataforma cloud.
+* **Evidencia esperada:** Capturas de pantalla de la configuración de MFA (demostrando que está forzado) y el documento del procedimiento de gestión de accesos.
+* **Posibles excepciones:** Encontrar cuentas de servicio o "break glass" (emergencia) sin MFA habilitado.
+
+### Procedimiento 2: Prueba de operación (¿Realmente funcionó?)
+* **Control:** Eficacia del monitoreo de descargas masivas.
+* **Qué haremos:** Extraeremos los logs de auditoría de la plataforma cloud (eventos de descarga) y filtraremos los volúmenes anómalos.
+* **Población o muestra:** Revisaremos una muestra de los logs de descargas del periodo. Propondremos tomar el 10% de los eventos más grandes o, de ser posible, los logs de las 3.300 cuentas afectadas.
+* **Qué compararemos:** La cantidad de archivos descargados contra el umbral definido. ¿El sistema emitió alertas? ¿Bloqueó la descarga?
+* **Evidencia esperada:** Archivos CSV con los logs, capturas del panel de alertas (SIEM) y tickets de incidentes generados.
+* **Posibles excepciones:** Encontrar en los logs que una cuenta descargó cientos de archivos y el sistema no generó ninguna alerta.
+
+---
+
+## 6. Organización de la ejecución (Cronograma y responsables)
+
+*Planificación propuesta. La ejecución real depende del acceso que brinde Ecopetrol.*
+
+| Fase | Actividad | Responsable | Tiempo estimado |
+|---|---|---|---|
+| **Preparación** | Solicitud formal de políticas y creación de la muestra. | Daniela Gonzalez | 3 días |
+| **Ejecución 1** | Entrevista con Ciberseguridad y revisión de configuraciones (Diseño). | Juan David Lopez | 2 días |
+| **Ejecución 2** | Extracción y análisis de logs en la nube (Operación). | Ambos auditores | 5 días |
+| **Cierre** | Redacción de hallazgos y socialización. | Ambos auditores | 3 días |
+
+**Dependencias:** Necesitamos que TI de Ecopetrol nos dé acceso de solo lectura a los logs y nos confirme el procedimiento interno de retención de datos.
