@@ -93,3 +93,20 @@ Diseñamos dos procedimientos complementarios para cubrir el diseño y la operac
 | **Cierre** | Redacción de hallazgos y socialización. | Ambos auditores | 3 días |
 
 **Dependencias:** Necesitamos que TI de Ecopetrol nos dé acceso de solo lectura a los logs y nos confirme el procedimiento interno de retención de datos.
+
+---
+
+## 7. Supuestos y limitaciones
+
+* **Hechos comprobados (según la matriz):** Ocurrió el ataque el 17 de julio de 2026, se descargaron 3.300 cuentas, el ransomware fue bloqueado y se revocaron accesos.
+* **Supuestos:** Asumimos que la empresa cuenta con herramientas de monitoreo (SIEM) y que las políticas están documentadas. Asumimos que las descargas se hacen a través de la nube y no por canales alternos.
+* **Información por solicitar:** Políticas de control de acceso, procedimiento de gestión de descargas y los logs reales de la plataforma.
+* **Limitaciones:** Al ser un plan de auditoría para el taller, no tenemos acceso a los logs reales. Si TI no tiene activadas las alertas, nuestra prueba arrojaría una excepción por falta de evidencia.
+
+---
+
+## 8. Fila de trazabilidad (Resumen)
+
+| ID del riesgo | Control a evaluar | Criterio y fuente | Procedimiento | Población o muestra | Evidencia esperada |
+|---|---|---|---|---|---|
+| **R-01 y R-02** | MFA y bloqueo de descargas masivas | ISO 27001 (A.5.17 y A.8.12) / Política Interna | 1. Revisión de configuración (Diseño).<br>2. Análisis de logs (Operación). | Configuración del tenant y logs del 1 de julio al 30 de septiembre de 2026. | Capturas de configuración, CSV de logs, tickets de alertas. |
