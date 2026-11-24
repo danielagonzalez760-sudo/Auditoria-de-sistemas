@@ -41,3 +41,36 @@ En este taller ejecutamos, con datos simulados, el **procedimiento de operación
 | **Exclusiones** | Sistemas SCADA y red OT (riesgo R-06), servidores físicos on-premise y el procedimiento de diseño del plan (revisión de configuración de MFA), que no se ejecutó en este taller. La conclusión aplica solo al control de descargas en la nube y a la muestra revisada |
 
 ---
+
+## 3. Criterios y metodología
+
+### 3.1 Criterio
+
+| Elemento | Detalle |
+|---|---|
+| **Criterio (política ficticia)** | *Política simulada PS-CIB-07:* toda sesión que descargue **más de 100 archivos en 60 minutos** debe generar una **alerta en el SIEM en máximo 15 minutos** y la sesión debe quedar **bloqueada** |
+| **Fuente** | Regla ficticia creada para el taller. Se alinea con ISO/IEC 27001:2022, controles **A.8.12** (prevención de fuga de datos) y **A.8.16** (actividades de monitoreo) |
+| **Responsable del control (supuesto)** | Equipo de monitoreo de seguridad (SOC) de la Dirección de Ciberseguridad |
+
+### 3.2 Selección de la muestra
+
+Seleccionamos las **10 sesiones con mayor volumen de descarga** del periodo (selección dirigida o por juicio). Elegimos este método porque el riesgo que auditamos es la descarga masiva: las sesiones más grandes son justamente donde el control debía activarse. Incluir las sesiones cercanas al umbral también permite comprobar que el sistema no alerta por debajo de él.
+
+**Limitación del método:** una muestra dirigida no es estadística. Sirve para evaluar los casos seleccionados, pero no permite proyectar un porcentaje a toda la población.
+
+### 3.3 Procedimiento
+
+1. Obtener el registro (log) de sesiones de descarga del periodo y ordenarlo por número de archivos descargados en 60 minutos.
+2. Seleccionar las 10 sesiones de mayor volumen.
+3. Para cada sesión, marcar si supera el umbral de 100 archivos.
+4. Para las sesiones que superan el umbral, buscar en el SIEM la alerta asociada y calcular el tiempo entre el inicio de la descarga masiva y la alerta.
+5. Verificar si la sesión fue bloqueada.
+6. **Condición de excepción:** la sesión supera el umbral y (a) no tiene alerta, (b) la alerta llegó después de 15 minutos o (c) la sesión no fue bloqueada.
+
+### 3.4 Evidencia examinada (simulada)
+
+* Extracto del log de sesiones de descarga (CSV ficticio).
+* Registros de alertas del SIEM asociados a cada sesión (ficticios).
+* Texto de la política simulada PS-CIB-07.
+
+---
