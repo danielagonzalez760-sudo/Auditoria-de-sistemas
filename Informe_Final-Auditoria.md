@@ -74,3 +74,46 @@ Seleccionamos las **10 sesiones con mayor volumen de descarga** del periodo (sel
 * Texto de la política simulada PS-CIB-07.
 
 ---
+## 4. Resultados y hallazgos
+
+### 4.1 Resultados de la prueba (datos ficticios)
+
+| # | Sesión | Cuenta | Fecha | Archivos en 60 min | ¿Supera umbral? | Alerta SIEM | Tiempo a la alerta | ¿Bloqueada? | Resultado |
+|---|---|---|---|---:|---|---|---|---|---|
+| 1 | S-01 | USR-014 | 8 jul | 412 | Sí | Sí | 6 min | Sí | Cumple |
+| 2 | S-02 | USR-203 | 22 jul | 356 | Sí | **No** | — | **No** | **Excepción** |
+| 3 | S-03 | USR-087 | 29 jul | 298 | Sí | Sí | 9 min | Sí | Cumple |
+| 4 | S-04 | USR-145 | 5 ago | 240 | Sí | Sí | **41 min** | Sí | **Excepción** |
+| 5 | S-05 | USR-031 | 14 ago | 187 | Sí | Sí | 4 min | Sí | Cumple |
+| 6 | S-06 | USR-260 | 26 ago | 152 | Sí | Sí | 7 min | Sí | Cumple |
+| 7 | S-07 | USR-112 | 3 sep | 131 | Sí | Sí | 11 min | Sí | Cumple |
+| 8 | S-08 | USR-076 | 12 sep | 96 | No | No | — | No | No aplica |
+| 9 | S-09 | USR-190 | 19 sep | 88 | No | No | — | No | No aplica |
+| 10 | S-10 | USR-058 | 25 sep | 74 | No | No | — | No | No aplica |
+
+**Lectura de la tabla:**
+* 7 de las 10 sesiones superaron el umbral. En 5 de ellas el control operó como exige la política simulada.
+* Las 3 sesiones bajo el umbral no generaron alerta, lo cual es correcto según el criterio.
+* La tabla **no demuestra** que las descargas de S-02 o S-04 hayan sido maliciosas, ni que el problema exista en toda la población.
+
+### 4.2 Hallazgo H-01: sesión que superó el umbral sin alerta ni bloqueo
+
+| Componente | Contenido |
+|---|---|
+| **Criterio** | Toda sesión con más de 100 archivos en 60 minutos debe generar alerta en el SIEM en máximo 15 minutos y quedar bloqueada (política simulada PS-CIB-07) |
+| **Condición** | La sesión simulada S-02 (cuenta USR-203) descargó 356 archivos en 60 minutos y no registró alerta ni bloqueo |
+| **Causa** | Pendiente de confirmar. La prueba no la establece. Habría que revisar, por ejemplo, si la cuenta estaba excluida de la regla de monitoreo o si sus eventos no llegaban al SIEM |
+| **Efecto o riesgo** | Una descarga masiva pudo completarse sin que el equipo de seguridad se enterara, que es el mismo tipo de evento del incidente real de julio de 2026 |
+| **Recomendación** | Revisar la cobertura de la regla de descargas masivas en el SIEM, incluyendo las cuentas o tipos de cuenta excluidos |
+
+### 4.3 Hallazgo H-02: alerta generada fuera del plazo
+
+| Componente | Contenido |
+|---|---|
+| **Criterio** | La alerta debe generarse en máximo 15 minutos (política simulada PS-CIB-07) |
+| **Condición** | En la sesión simulada S-04 (cuenta USR-145), la alerta se generó 41 minutos después del inicio de la descarga masiva |
+| **Causa** | Pendiente de confirmar. La prueba no establece si el retraso viene de la recolección de logs, de la regla de correlación o de la atención de la alerta |
+| **Efecto o riesgo** | Durante esos 41 minutos la descarga pudo continuar; el bloqueo tardío reduce la utilidad del control |
+| **Recomendación** | Medir los tiempos de cada etapa (recolección, correlación y alerta) para identificar dónde se produce el retraso |
+
+
