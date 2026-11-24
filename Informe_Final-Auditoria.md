@@ -25,3 +25,19 @@
 **Resumen.** El 17 de julio de 2026, Ecopetrol informó un acceso no autorizado a entornos de almacenamiento de archivos en la nube de aproximadamente 15 compañías del Grupo, con la descarga de datos asociados a unas 3.300 cuentas de usuario (El País, 2026). Los controles de la empresa bloquearon el intento de cifrado (ransomware), pero no evitaron la extracción de archivos (ITSitio, 2026). Por eso, en nuestra matriz de riesgos este escenario quedó con el nivel más alto, y en el plan de auditoría definimos cómo verificar el control que debía detener la extracción.
 
 En este taller ejecutamos, con datos simulados, el **procedimiento de operación** del plan: comparar sesiones de descarga contra el umbral de una política ficticia y verificar si el sistema generó la alerta y el bloqueo esperados. En 2 de las 7 sesiones simuladas que superaron el umbral, el control no operó como lo exige la política simulada. La causa no quedó establecida con la prueba.
+
+## 2. Objetivo y alcance
+
+**Objetivo (tomado del plan de auditoría):**
+> Determinar si el control de alerta y bloqueo de descargas masivas en los entornos de almacenamiento en la nube operó de manera efectiva entre el 1 de julio y el 30 de septiembre de 2026, de acuerdo con la política de seguridad aplicable.
+
+| Elemento | Definición |
+|---|---|
+| **Proceso** | Monitoreo y control de descargas en el almacenamiento en la nube |
+| **Sistema** | Plataforma de almacenamiento en la nube corporativa y su herramienta de monitoreo de seguridad (SIEM) |
+| **Periodo** | 1 de julio al 30 de septiembre de 2026 |
+| **Población (simulada)** | 1.240 sesiones de descarga registradas en el periodo |
+| **Muestra (simulada)** | 10 sesiones (ver sección 3) |
+| **Exclusiones** | Sistemas SCADA y red OT (riesgo R-06), servidores físicos on-premise y el procedimiento de diseño del plan (revisión de configuración de MFA), que no se ejecutó en este taller. La conclusión aplica solo al control de descargas en la nube y a la muestra revisada |
+
+---
