@@ -117,3 +117,55 @@ Seleccionamos las **10 sesiones con mayor volumen de descarga** del periodo (sel
 | **Recomendación** | Medir los tiempos de cada etapa (recolección, correlación y alerta) para identificar dónde se produce el retraso |
 
 
+## 5. Conclusión y limitaciones
+
+### 5.1 Conclusión
+
+Con base en la prueba simulada realizada, se identificó que el control de alerta y bloqueo de descargas masivas presentó **dos excepciones en las siete sesiones que superaron el umbral** definido en la política simulada PS-CIB-07.
+
+En la sesión S-02 se registró una descarga de 356 archivos en 60 minutos sin alerta ni bloqueo. En la sesión S-04 se generó una alerta 41 minutos después del inicio de la descarga, superando el máximo de 15 minutos establecido en el criterio. Las otras cinco sesiones que superaron el umbral cumplieron las condiciones revisadas. Las tres sesiones que no superaron el umbral no requerían activar la alerta, de acuerdo con la política simulada.
+
+Por lo anterior, **el control no cumplió completamente el criterio en todos los casos examinados**. Los resultados muestran oportunidades de mejora en la cobertura de las alertas y en el tiempo de generación de estas. Sin embargo, como se trata de una muestra dirigida y de datos ficticios, esta conclusión se limita exclusivamente a las diez sesiones simuladas y no permite afirmar que los controles reales de Ecopetrol presenten esas fallas.
+
+### 5.2 Limitaciones
+
+- El ejercicio se desarrolló con información ficticia. El equipo no tuvo acceso a los registros, sistemas, configuraciones ni personal de Ecopetrol.
+- La muestra fue dirigida y estuvo conformada por las diez sesiones simuladas con mayor volumen de descarga. Por esta razón, no es estadísticamente representativa de las 1.240 sesiones de la población simulada.
+- La prueba permitió comparar volúmenes, alertas y estado de bloqueo, pero no identificar la causa técnica de las excepciones.
+- No se comprobó que las sesiones S-02 o S-04 fueran maliciosas, que se hubiera producido una filtración adicional ni que alguna persona hubiera accedido a la información.
+- El alcance no incluyó la revisión de MFA, los sistemas SCADA, la red OT ni los servidores físicos.
+
+Para confirmar las causas y determinar si una situación similar existe en un entorno real, sería necesario revisar registros originales, configuración de las reglas del SIEM, trazabilidad de los eventos y evidencias de bloqueo, con autorización de la organización.
+
+## 6. Plan de acción y anexos
+
+### 6.1 Plan de acción propuesto
+
+Las siguientes acciones son propuestas académicas para atender los hallazgos de la prueba simulada. Los responsables y plazos son sugeridos por el equipo y no corresponden a compromisos confirmados por Ecopetrol.
+
+| Hallazgo | Acción propuesta | Responsable propuesto | Prioridad | Plazo propuesto | Evidencia de cierre |
+|---|---|---|---|---|---|
+| **H-01: sesión que superó el umbral sin alerta ni bloqueo** | Revisar la cobertura de la regla de detección de descargas masivas en el SIEM, incluyendo los tipos de cuenta y repositorios que están siendo monitoreados. Identificar posibles exclusiones y verificar que los eventos de descarga estén llegando correctamente al sistema. | Líder del SOC y administrador de la plataforma SIEM. | Alta | 15 días | Registro de revisión de la regla, listado de cuentas y repositorios cubiertos, justificación de exclusiones y resultado de una prueba controlada. |
+| **H-02: alerta generada fuera del plazo establecido** | Revisar el proceso de generación de alertas, midiendo los tiempos de recolección de registros, procesamiento y correlación en el SIEM. Identificar la etapa que ocasiona el retraso y realizar los ajustes necesarios para cumplir el tiempo establecido. | Equipo de monitoreo SOC y administrador del SIEM. | Alta | 30 días | Informe de medición de tiempos, ajustes documentados y resultado de una nueva prueba que permita verificar el cumplimiento del plazo de 15 minutos. |
+
+### 6.2 Seguimiento del plan
+
+Se propone que el responsable de cada acción documente los avances y conserve las evidencias de su ejecución. Una vez cumplidos los plazos, el equipo encargado de seguridad debería realizar una prueba posterior para verificar si las situaciones identificadas fueron corregidas.
+
+Una acción no debería considerarse cerrada únicamente porque se haya realizado un ajuste. También debe existir evidencia que demuestre que el control funciona de acuerdo con el criterio definido.
+
+Si la prueba posterior vuelve a presentar excepciones, se debería mantener el hallazgo abierto y revisar las causas antes de darlo por solucionado.
+
+### 6.3 Anexos y documentos relacionados
+
+1. **Matriz de riesgos:** https://github.com/danielagonzalez760-sudo/Auditoria-de-sistemas/blob/main/taller2-matriz-riesgos.md
+
+2. **Plan de auditoría:** https://github.com/danielagonzalez760-sudo/Auditoria-de-sistemas/blob/c4d8d98c3fb7131dea4e2115a0276ebb9f289876/Taller%3A%20Del_riesgo_al_plandeauditoria.md
+
+## Referencias
+
+- Ecopetrol S.A. (18 de julio de 2026). *Ecopetrol informa sobre un incidente cibernético*. Comunicado corporativo. https://www.refineriadecartagena.com.co/es-ES/Noticias/Detalle-noticia/?id=7bdfd46c-d882-f111-ab0e-70a8a59d0eda
+
+- El País. (30 de julio de 2026). *Un ciberataque a Ecopetrol expone información del negocio y de sus empleados*. https://elpais.com/america-colombia/2026-07-30/un-ciberataque-a-ecopetrol-expone-informacion-del-negocio-y-de-sus-empleados.html
+
+- International Organization for Standardization. (2022). *ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements*. ISO.
