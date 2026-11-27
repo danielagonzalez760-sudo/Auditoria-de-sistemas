@@ -169,3 +169,9 @@ Si la prueba posterior vuelve a presentar excepciones, se debería mantener el h
 - El País. (30 de julio de 2026). *Un ciberataque a Ecopetrol expone información del negocio y de sus empleados*. https://elpais.com/america-colombia/2026-07-30/un-ciberataque-a-ecopetrol-expone-informacion-del-negocio-y-de-sus-empleados.html
 
 - International Organization for Standardization. (2022). *ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements*. ISO.
+- * El Colombiano. (2026, 21 de julio). *¿Quién es The Gentlemen, la "mafia digital" que hackeó a Ecopetrol y le robó miles de datos?* https://www.elcolombiano.com/negocios/the-gentlemen-grupo-hackeo-ecopetrol-colombia-robo-datos-CJ39035520
+* El País. (2026, 17 de julio). *Ecopetrol fue víctima de ataque cibernético y robo de información, según voceros.* https://www.elpais.com.co/colombia/ecopetrol-fue-victima-de-ataque-cibernetico-y-robo-de-informacion-segun-voceros-1712.html
+* International Organization for Standardization. (2022). *ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements.* ISO.
+* ITSitio. (2026). *Ciberataque a Ecopetrol: qué datos quedaron expuestos.* https://www.itsitio.com/co/?p=180469
+* Noticias Caracol. (2026, julio). *Ecopetrol confirmó ataque cibernético que habría dejado más de 3.000 cuentas afectadas: ¿qué pasó?* https://www.noticiascaracol.com/economia/ecopetrol-confirmo-ataque-cibernetico-que-habria-dejado-mas-de-3-000-cuentas-afectadas-que-paso-so35
+* The Rio Times. (2026). *Ecopetrol data leak: hackers claim 327,095 files from Colombia's state oil firm.* https://www.riotimesonline.com/ecopetrol-data-leak-hackers-claim-327095-files-from-colombias-state-oil-firm/
